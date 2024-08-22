@@ -1,0 +1,44 @@
+class Node:
+    def __init__(self,data): #constructor
+       self.data = data
+       self.next = None  
+
+#creating nodes
+N1=Node(10)
+N2=Node(20)
+N3=Node(30)
+N4=Node(40)
+
+#connecting nodes to form a linked list
+N1.next = N2
+N2.next = N3
+N3.next = N4
+
+#this is for printing linked list
+head = N1
+current = head
+while current != None:
+    print(current.data,end ="->")
+    #print("|",current.data,"|",current.next ,end ="->")
+    current = current.next
+
+print("None")
+
+#this is for insertion at end
+new_node = Node(50)
+head = N1
+current = head
+while current.next is not None:
+    current = current.next
+
+current.next = new_node
+
+
+#this is for printing updated linked list
+current = head
+while current != None:
+    print(current.data,end ="->")
+    #print("|",current.data,"|",current.next ,end ="->")
+    current = current.next
+
+print("None")
